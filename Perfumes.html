@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="VAMEZeal LOGO 1.png" type="image/x-icon">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample</title>
+    <style>
+        
+        body {
+            text-align: center;
+            background-color: red;
+            background-image: url("All Natural Fibre.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: auto;
+            height: auto;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        span.logo {
+            width: auto;
+            height: auto;
+            text-align: center;
+            float: left;
+            background-color: #181818;
+            border-radius: 50px;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-direction: alternate;
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            display: flex;
+        }
+        
+        @keyframes rotate {0% {transform: rotate(0);} 100% {transform: rotate(360deg);}}
+
+        span.buttons {
+            float: right;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+
+        a.seeing {
+            shape-rendering: crispEdges;
+            position: relative;
+            animation-name: mymove;
+            animation-duration: 1s;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+            background-color: #181818;
+            color: white;
+            text-align: center;
+            width: auto;
+            float: right;
+            border-radius: 50px;
+            font-size: 20px;
+            font-family: "Poppins";
+            font-weight: 400;
+        }
+
+        @keyframes mymove {from {right: 0px;} to {right: 20px;}}
+
+        a.seeing:link {
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "Poppins";
+            font-weight: 400;
+            animation: mymove 3s;
+            animation-delay: 0.5s;
+            animation-fill-mode: initial;
+        }
+
+        a.seeing:hover {
+            padding-left: 7px;
+            padding-right: 7px;
+            margin-left: 2px;
+            margin-right: 2px;
+            color: black;
+            background-color: green;
+            border-radius: 50px;
+        }
+
+        #myInput {
+          width: auto; /* Full-width */
+          text-align: center;
+          font-size: 16px; /* Increase font-size */
+          padding-left: 1px;
+          padding-right: 1px; /* Add some padding */
+          border: 1px; /* Add a grey border */
+          border-radius: 10px;
+          margin-top: 1px;
+          margin-bottom: 1px; /* Add some space below the input */
+        }
+
+        h2#koi {
+          background-color: #181818;
+          color: white;
+          font-size: 34px;
+          font-family: "Poppins";
+          font-weight: 400;
+          border-radius: 3px;
+        }
+
+        #myBtnContainer {
+            text-align: center;
+            padding-top: 0.5%;
+            padding-bottom: 0.5%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      
+        /* Style the buttons */
+        .btn {
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            background-color: white;
+            font-size: 16px;
+            font-family: "Poppins";
+            font-weight: 400;
+            animation: myfirst 1.5s 1;
+            animation-direction: alternate;
+        }
+
+        @keyframes myfirst {
+            0% { background: darkred; }
+            25% { background: gold; }
+            50% { background: darkblue; }
+            75% { background: green; }
+            100% { background: orangered; }
+        }
+
+        .btn:hover {
+            background-color: green;
+        }
+
+        .btn:active {
+            background-color: #181818;
+            color: white;
+            shape-rendering: crispEdges;
+            position: relative;
+            animation: mymove 3s;
+            animation-delay: 0.5s;
+            animation-fill-mode: none;
+        }
+
+        @keyframes mymove {from {bottom: 100px; background-color: green;}}
+
+        .myUL {
+          padding-top: 0%;
+          padding-bottom: 0%;
+          padding-left: 0.5%;
+          padding-right: 0.5%;
+          margin-top: 1px;
+          margin-bottom: 1px;
+          margin-left: 1.5px;
+          margin-right: 1.5px;
+          border-radius: 5px;
+          display: flex;
+          overflow: auto;
+          text-align: center;
+          align-items: center;
+          background-color: #181818;
+          color: white;
+        }
+
+        .filterDiv {
+          animation: myfirst 1.5s 1;
+          animation-direction: alternate;
+          background-color: white;
+          color: black;
+          float: left;
+          background-color: white;
+          color: black;
+          width: auto;
+          line-height: 30px;
+          text-align: center;
+          padding-top: 0.5%;
+          padding-bottom: 0.5%;
+          padding-left: 0.5%;
+          padding-right: 0.5%;
+          margin-top: 1px;
+          margin-bottom: 1px;
+          margin-left: 2px;
+          margin-right: 2px;
+          border-radius: 5px;
+          display: none; /* Hidden by default */
+        }
+
+        img.products {
+            animation: shake 0.5s;
+            animation-iteration-count: initial;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        a.purchase {
+            shape-rendering: crispEdges;
+            background-color: darkorange;
+            color: white;
+            padding-left: 7px;
+            padding-right: 7px;
+            border-radius: 25px;
+            position: relative;
+            animation: mymove 3s;
+            animation-delay: 0.5s;
+            animation-fill-mode: both;
+
+        }
+
+        @keyframes mymove {from {bottom: 100px; background-color: green;}}
+
+        a.purchase:link {
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "Poppins";
+            font-weight: 400;
+            height: initial;
+            width: initial;
+        }
+
+        a.purchase:hover {
+            background-color: green;
+            color: black;
+        }
+
+        .show {
+            display: block;
+        }
+
+        footer {
+            color: black;
+            text-align: center;
+        }
+
+        nav {
+            color: white;
+            background-color: #181818;
+            padding-top: 1%;
+            padding-bottom: 1px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            text-align: center;
+        }
+
+        nav b {
+            font-family: "Poppins";
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        nav a.reaspon {
+            color: white;
+            background-color: #181818;
+            text-align: center;
+        }
+
+        nav a:link {
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-family: "Poppins";
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+    <script>// Note that we are setting `SameSite=None;` in this example because the example
+      // needs to work cross-origin.
+      // It is more common not to set the `SameSite` attribute, which results in the default,
+      // and more secure, value of `SameSite=Lax;`
+      document.cookie = "name=snifftegist; SameSite=None; Secure";
+      document.cookie = "favorite_food=cookie; SameSite=None; Secure";
+      
+      function showCookies() {
+        const output = document.getElementById("cookies");
+        output.textContent = `> ${document.cookie}`;
+      }
+      
+      function clearOutputCookies() {
+        const output = document.getElementById("cookies");
+        output.textContent = "";
+      }
+      
+      // Note that we are setting `SameSite=None;` in this example because the example
+      // needs to work cross-origin.
+      // It is more common not to set the `SameSite` attribute, which results in the default,
+      // and more secure, value of `SameSite=Lax;`
+      document.cookie = "test1=Hello; SameSite=None; Secure";
+      document.cookie = "test2=Visitor; SameSite=None; Secure";
+      
+      const cookieValue = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("test2="))
+        ?.split("=")[1];
+      
+      function showCookieValue() {
+        const output = document.getElementById("cookie-value");
+        output.textContent = `> ${cookieValue}`;
+      }
+      
+      function clearOutputCookieValue() {
+        const output = document.getElementById("cookie-value");
+        output.textContent = "";
+      }
+      
+      function doOnce() {
+        if (
+          !document.cookie
+            .split("; ")
+            .find((row) => row.startsWith("doSomethingOnlyOnce"))
+        ) {
+
+          // Note that we are setting `SameSite=None;` in this example because the example
+          // needs to work cross-origin.
+          // It is more common not to set the `SameSite` attribute, which results in the default,
+          // and more secure, value of `SameSite=Lax;`
+          document.cookie =
+            "doSomethingOnlyOnce=true; expires=Tue, 31 Dec 2024 23:59:59 GMT; SameSite=None; Secure";
+      
+          const output = document.getElementById("do-once");
+          output.textContent = "> Do something here!";
+        }
+      }
+      
+      function clearOutputDoOnce() {
+        const output = document.getElementById("do-once");
+        output.textContent = "";
+      }
+      
+      function resetOnce() {
+        // Note that we are setting `SameSite=None;` in this example because the example
+        // needs to work cross-origin.
+        // It is more common not to set the `SameSite` attribute, which results in the default,
+        // and more secure, value of `SameSite=Lax;`
+        document.cookie =
+          "doSomethingOnlyOnce=; expires=Mon, 01 Jan 2024 00:00:00 GMT; SameSite=None; Secure";
+      
+        const output = document.getElementById("reset-once");
+        output.textContent = "> Reset!";
+      }
+      
+      function clearOutputResetOnce() {
+        const output = document.getElementById("reset-once");
+        output.textContent = "";
+      }
+      
+      // Note that we are setting `SameSite=None;` in this example because the example
+      // needs to work cross-origin.
+      // It is more common not to set the `SameSite` attribute, which results in the default,
+      // and more secure, value of `SameSite=Lax;`
+      document.cookie = "reader=1; SameSite=None; Secure";
+      
+      function checkACookieExists() {
+        if (
+          document.cookie.split(";").some((item) => item.trim().startsWith("reader="))
+        ) {
+          const output = document.getElementById("a-cookie-existence");
+          output.textContent = '> The cookie "reader" exists';
+        }
+      }
+      
+      function clearOutputACookieExists() {
+        const output = document.getElementById("a-cookie-existence");
+        output.textContent = "";
+      }
+      
+      function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      
+      function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      
+      function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+          alert("Welcome back" + user);
+        } else {
+          user = prompt("Please enter your name:", "");
+          if (user != "" && user != "Drsniff") {
+            setCookie("username", user, 365);
+          }
+        }
+      }
+    </script>
+    <script src="service-worker.js"></script>
+  </head>
+    <body>
+      <header>
+        <div class="menu">
+            <span class="logo"><img id="VAMEZeal" title="VAMEZeal" src="VAMEZeal LOGO 1.png" alt="VAMEZeal LOGO 1.png" width="60" height="60"></span>
+            <span class="buttons"><a class="seeing" href="home">Home</a><a class="seeing" href="products">Products</a><a class="seeing" href="Office">Office</a></span>  
+        </div>
+      </header><br><br>
+      <input type="text/search" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" size="25">
+      
+      <h2 id="koi">Welcome !</h2>
+
+      <div id="myBtnContainer">
+        <button class="btn active" type="button" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" type="button" onclick="filterSelection('cars')"> Cars</button>
+        <button class="btn" type="button" onclick="filterSelection('animals')"> Animals</button>
+        <button class="btn" type="button" onclick="filterSelection('fruits')"> Fruits</button>
+        <button class="btn" type="button" onclick="filterSelection('colors')"> Colors</button>
+      </div>
+
+      <span class="myUL">
+        <div class="filterDiv cars">BMW<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy BMW</a></div>
+        <div class="filterDiv colors fruits">Orange<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Orange</a></div>
+        <div class="filterDiv cars">Volvo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Volvo</a></div>
+        <div class="filterDiv cars">Ferrary<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ferrary</a></div>
+        <div class="filterDiv colors">Red<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Red</a></div>
+        <div class="filterDiv cars">Ford<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ford</a></div>
+        <div class="filterDiv colors">Blue<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Blue</a></div>
+        <div class="filterDiv animals">Cat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cat</a></div>
+        <div class="filterDiv animals">Dog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dog</a></div>
+        <div class="filterDiv fruits">Melon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Melon</a></div>
+        <div class="filterDiv fruits animals">Kiwi<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Kiwi</a></div>
+        <div class="filterDiv fruits">Banana<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Banana</a></div>
+        <div class="filterDiv fruits">Lemon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Lemon</a></div>
+        <div class="filterDiv animals">Cow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cow</a></div>
+        <div class="filterDiv animals">Ram<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ram</a></div>
+        <div class="filterDiv cars">Benze<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Benze</a></div>
+        <div class="filterDiv colors fruits">orangered<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy orangered</a></div>
+        <div class="filterDiv cars">Vibe<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Vibe</a></div>
+        <div class="filterDiv cars">Howo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Howo</a></div>
+        <div class="filterDiv colors">Rosybrown<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Rosybrown</a></div>
+        <br>
+        <div class="filterDiv cars">Toyota<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Toyota</a></div>
+        <div class="filterDiv colors">Black<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Black</a></div>
+        <div class="filterDiv animals">Catdog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Catdog</a></div>
+        <div class="filterDiv animals">Bulldog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Bulldog</a></div>
+        <div class="filterDiv fruits">Mango<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Mango</a></div>
+        <div class="filterDiv fruits animals">Sparow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Sparow</a></div>
+        <div class="filterDiv fruits">Plantain<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Plantain</a></div>
+        <div class="filterDiv fruits">Apples<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Apples</a></div>
+        <div class="filterDiv animals">Hipotemus<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Hipotemus</a></div>
+        <div class="filterDiv animals">Goat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goat</a></div>
+        <div class="filterDiv cars">Tata<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tata</a></div>
+        <div class="filterDiv colors">Goldenred<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goldenred</a></div>
+        <div class="filterDiv animals">Cangaroo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cangaroo</a></div>
+        <div class="filterDiv animals">Dinosous<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dinosous</a></div>
+        <div class="filterDiv fruits">Tamarid<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tamarid</a></div>
+        <div class="filterDiv fruits animals">Camel<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Camel</a></div>
+        <div class="filterDiv fruits">Pineapple<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></div>
+        <div class="filterDiv fruits">Dates<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dates</a></div>
+        <div class="filterDiv animals">Seacow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Seacow</a></div>
+        <div class="filterDiv animals">Elephant<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Elephant</a></div>
+      </span><br>
+        <span class="myUL">
+          <div class="filterDiv cars">BMW<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy BMW</a></div>
+          <div class="filterDiv colors fruits">Orange<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Orange</a></div>
+          <div class="filterDiv cars">Volvo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Volvo</a></div>
+          <div class="filterDiv cars">Ferrary<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ferrary</a></div>
+          <div class="filterDiv colors">Red<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Red</a></div>
+          <div class="filterDiv cars">Ford<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ford</a></div>
+          <div class="filterDiv colors">Blue<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Blue</a></div>
+          <div class="filterDiv animals">Cat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cat</a></div>
+          <div class="filterDiv animals">Dog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dog</a></div>
+          <div class="filterDiv fruits">Melon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Melon</a></div>
+          <div class="filterDiv fruits animals">Kiwi<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Kiwi</a></div>
+          <div class="filterDiv fruits">Banana<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Banana</a></div>
+          <div class="filterDiv fruits">Lemon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Lemon</a></div>
+          <div class="filterDiv animals">Cow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cow</a></div>
+          <div class="filterDiv animals">Ram<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ram</a></div>
+          <div class="filterDiv cars">Benze<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Benze</a></div>
+          <div class="filterDiv colors fruits">orangered<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy orangered</a></div>
+          <div class="filterDiv cars">Vibe<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Vibe</a></div>
+          <div class="filterDiv cars">Howo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Howo</a></div>
+          <div class="filterDiv colors">Rosybrown<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Rosybrown</a></div>
+          <br>
+          <div class="filterDiv cars">Toyota<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Toyota</a></div>
+          <div class="filterDiv colors">Black<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Black</a></div>
+          <div class="filterDiv animals">Catdog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Catdog</a></div>
+          <div class="filterDiv animals">Bulldog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Bulldog</a></div>
+          <div class="filterDiv fruits">Mango<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Mango</a></div>
+          <div class="filterDiv fruits animals">Sparow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Sparow</a></div>
+          <div class="filterDiv fruits">Plantain<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Plantain</a></div>
+          <div class="filterDiv fruits">Apples<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Apples</a></div>
+          <div class="filterDiv animals">Hipotemus<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Hipotemus</a></div>
+          <div class="filterDiv animals">Goat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goat</a></div>
+          <div class="filterDiv cars">Tata<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tata</a></div>
+          <div class="filterDiv colors">Goldenred<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goldenred</a></div>
+          <div class="filterDiv animals">Cangaroo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cangaroo</a></div>
+          <div class="filterDiv animals">Dinosous<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dinosous</a></div>
+          <div class="filterDiv fruits">Tamarid<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tamarid</a></div>
+          <div class="filterDiv fruits animals">Camel<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Camel</a></div>
+          <div class="filterDiv fruits">Pineapple<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></div>
+          <div class="filterDiv fruits">Dates<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dates</a></div>
+          <div class="filterDiv animals">Seacow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Seacow</a></div>
+          <div class="filterDiv animals">Elephant<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Elephant</a></div>
+        </span>
+      
+        <script>
+          function myFunction() {
+              var input, filter, span, div, a, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              span = document.getElementsByClassName("myUL");
+              div = span.getElementsByTagName("div");
+              for (i = 0; i < div.length; i++) {
+                  a = div[i].getElementsByTagName("a")[0];
+                  txtValue = a.textContent || a.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    div[i].style.display = "";
+                  } else {
+                    div[i].style.display = "none";
+                  }
+              }
+          }
+          </script>
+    
+          <script>
+            filterSelection("all")
+            function filterSelection(c) {
+              var x, i;
+              x = document.getElementsByClassName("filterDiv");
+              if (c == "all") c = "";
+              // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+              for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+              }
+            }
+            
+            // Show filtered elements
+            function w3AddClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                  element.className += " " + arr2[i];
+                }
+              }
+            }
+            
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+              var i, arr1, arr2;
+              arr1 = element.className.split(" ");
+              arr2 = name.split(" ");
+              for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                  arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+              }
+              element.className = arr1.join(" ");
+            }
+            
+            // Add active class to the current control button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+              btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+              });
+            }
+          </script>
+</body>
+<footer><br>
+  Aliexpress Approved<br><br>
+  <nav>
+    <b id="license" title="license" href="license.html">(c) 2022 Market</b><br><br><br>
+      <a class="reason" href="https://www.youtube.com">
+        <img title="youtube" src="YouTube-Logo AA.png" alt="YouTube-Logo AA.png" width="30" height="30" /></a>
+      <a title="whatsapp" href="https://www.whatsapp.com">
+        <img title="whatsapp" src="Enbe Whats'App Logo.png" alt="Enbe Whats'App Logo.png" width="30" height="30" /></a>
+        <a title="call" href="call:+2348166049252">
+          <img title="call" src="SniffTegist Telephone2.png" alt="SniffTegist Telephone.png" width="30" height="30" />
+  </nav>
+</footer>
+</html>
