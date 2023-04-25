@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <link rel="shortcut icon" href="VAMEZeal LOGO 1.png" type="image/x-icon">
-  <meta name="description" content="">
+
+  <meta name="description" content="text/html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sample</title>
     <style>
@@ -15,14 +16,16 @@
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            width: auto;
-            height: auto;
+            width: initial;
+            height: initial;
             padding-top: 2px;
             padding-bottom: 2px;
+            padding-left: 2px;
+            padding-right: 2px;
             margin-top: 2px;
-            margin-bottom: 2px;
-            margin-left: 3px;
-            margin-right: 3px;
+            margin-bottom: 0.5px;
+            margin-left: 2px;
+            margin-right: 2px;
         }
 
         span.logo {
@@ -54,13 +57,15 @@
             padding-bottom: 2%;
             margin-left: 3px;
             margin-right: 3px;
-        }
-
-        a.seeing {
             shape-rendering: crispEdges;
             position: relative;
             animation-name: mymove;
             animation-duration: 1s;
+        }
+
+        @keyframes mymove {from {right: 0px;} to {right: 20px;}}
+
+        a.seeing {
             margin-left: 5px;
             margin-right: 5px;
             padding-left: 7px;
@@ -76,16 +81,12 @@
             font-weight: 400;
         }
 
-        @keyframes mymove {from {right: 0px;} to {right: 20px;}}
-
         a.seeing:link {
             text-decoration: none;
             font-size: 16px;
             font-family: "Poppins";
             font-weight: 400;
-            animation: mymove 3s;
-            animation-delay: 0.5s;
-            animation-fill-mode: initial;
+            border-radius: 50px;
         }
 
         a.seeing:hover {
@@ -99,15 +100,25 @@
         }
 
         #myInput {
-          width: auto; /* Full-width */
+          width: initial; /* Full-width */
+          height: initial;
           text-align: center;
+          font-family: "Poppins";
+          font-weight: 400;
           font-size: 16px; /* Increase font-size */
+          padding-top: 1px;
+          padding-bottom: 1px;
           padding-left: 1px;
           padding-right: 1px; /* Add some padding */
-          border: 1px; /* Add a grey border */
-          border-radius: 10px;
+          border-radius: 20px;
           margin-top: 1px;
           margin-bottom: 1px; /* Add some space below the input */
+          margin-left: 1px;
+          margin-right: 1px;
+          border-color: white;
+          border-style: none;
+          background-color: #181818;
+          color: white;
         }
 
         h2#koi {
@@ -129,7 +140,8 @@
       
         /* Style the buttons */
         .btn {
-            border: none;
+          border: none;
+            outline: none;
             border-radius: 5px;
             outline: none;
             padding-top: 1px;
@@ -137,6 +149,7 @@
             padding-left: 1px;
             padding-right: 1px;
             background-color: white;
+            color: black;
             font-size: 16px;
             font-family: "Poppins";
             font-weight: 400;
@@ -153,37 +166,45 @@
         }
 
         .btn:hover {
-            background-color: green;
+            background-color: red;
         }
 
-        .btn:active {
-            background-color: #181818;
-            color: white;
-            shape-rendering: crispEdges;
-            position: relative;
-            animation: mymove 3s;
-            animation-delay: 0.5s;
-            animation-fill-mode: none;
+        .btn.active {
+          background-color: green;
         }
 
-        @keyframes mymove {from {bottom: 100px; background-color: green;}}
+        .container {
+          overflow: hidden;
+          text-align: center;
+          background-color: white;
+          border-radius: 5px;
+        }
 
-        .myUL {
-          padding-top: 0%;
-          padding-bottom: 0%;
-          padding-left: 0.5%;
-          padding-right: 0.5%;
-          margin-top: 1px;
-          margin-bottom: 1px;
-          margin-left: 1.5px;
-          margin-right: 1.5px;
+        #container2 {
+          overflow: hidden;
+          text-align: center;
+          background-color: #181818;
+          border-radius: 5px;
+        }
+
+
+        #myUL {
+          padding-top: 1px;
+          padding-bottom: 1px;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin-top: 2px;
+          margin-bottom: 2px;
+          margin-left: 1px;
+          margin-right: 1px;
           border-radius: 5px;
           display: flex;
-          overflow: auto;
           text-align: center;
-          align-items: center;
           background-color: #181818;
           color: white;
+          overflow: auto;
+          width: auto;
+          height: auto;
         }
 
         .filterDiv {
@@ -191,22 +212,32 @@
           animation-direction: alternate;
           background-color: white;
           color: black;
-          float: left;
-          background-color: white;
-          color: black;
           width: auto;
+          height: auto;
           line-height: 30px;
           text-align: center;
+          align-self: center;
+          font-family: "Poppins";
+          font-weight: 400;
+          font-size: 25px;
           padding-top: 0.5%;
           padding-bottom: 0.5%;
           padding-left: 0.5%;
           padding-right: 0.5%;
-          margin-top: 1px;
-          margin-bottom: 1px;
+          margin-top: 3px;
+          margin-bottom: 3px;
           margin-left: 2px;
           margin-right: 2px;
           border-radius: 5px;
           display: none; /* Hidden by default */
+        }
+
+        @keyframes myfirst {
+            0% { background: darkred; }
+            25% { background: gold; }
+            50% { background: darkblue; }
+            75% { background: green; }
+            100% { background: orangered; }
         }
 
         img.products {
@@ -214,6 +245,7 @@
             animation-iteration-count: initial;
             text-align: center;
             border-radius: 5px;
+            width: initial;
         }
 
         @keyframes shake {
@@ -228,6 +260,24 @@
             80% { transform: translate(-1px, -1px) rotate(1deg); }
             90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        .ptext {
+          text-align: center;
+          font-size: 10px;
+          font-family: "Poppins";
+          font-weight: 400;
+          word-spacing: initial;
+          width: initial;
+          height: initial;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 5px;
+          padding-right: 5px;
+          margin-top: 1px;
+          margin-bottom: 1px;
+          margin-left: 1px;
+          margin-right: 1px;
         }
 
         a.purchase {
@@ -267,16 +317,26 @@
         footer {
             color: black;
             text-align: center;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-size: 16px;
+            font-family: "Poppins";
+            font-weight: 400;
         }
 
         nav {
             color: white;
             background-color: #181818;
             padding-top: 1%;
-            padding-bottom: 1px;
+            padding-bottom: 0px;
+            margin-top: 0%;
+            margin-bottom: 0%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             text-align: center;
+            font-size: 16px;
         }
 
         nav b {
@@ -300,6 +360,10 @@
             font-family: "Poppins";
             margin-left: 10px;
             margin-right: 10px;
+        }
+
+        #chi {
+          font-size: 11px;
         }
     </style>
     <script>// Note that we are setting `SameSite=None;` in this example because the example
@@ -438,130 +502,159 @@
     </script>
     <script src="service-worker.js"></script>
   </head>
-    <body>
+    <body onload="Function()">
       <header>
         <div class="menu">
             <span class="logo"><img id="VAMEZeal" title="VAMEZeal" src="VAMEZeal LOGO 1.png" alt="VAMEZeal LOGO 1.png" width="60" height="60"></span>
-            <span class="buttons"><a class="seeing" href="home">Home</a><a class="seeing" href="products">Products</a><a class="seeing" href="Office">Office</a></span>  
+            <span class="buttons"><a class="seeing" href="products">Office</a><a class="seeing" href="Office">Products</a><a class="seeing" href="#">Home</a></span>  
         </div>
-      </header><br><br>
-      <input type="text/search" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name" size="25">
+      </header><br>
+      <input type="text/search" id="myInput" oninput="sFunction()" onkeyup="myFunction()" placeholder="Find something.." title="finder" size="25">
       
       <h2 id="koi">Welcome !</h2>
 
+      <!-- Control buttons -->
       <div id="myBtnContainer">
-        <button class="btn active" type="button" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" type="button" onclick="filterSelection('cars')"> Cars</button>
-        <button class="btn" type="button" onclick="filterSelection('animals')"> Animals</button>
-        <button class="btn" type="button" onclick="filterSelection('fruits')"> Fruits</button>
-        <button class="btn" type="button" onclick="filterSelection('colors')"> Colors</button>
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+        <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+        <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+        <button class="btn" onclick="filterSelection('colors')"> Colors</button>
       </div>
 
-      <span class="myUL">
-        <div class="filterDiv cars">BMW<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy BMW</a></div>
-        <div class="filterDiv colors fruits">Orange<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Orange</a></div>
-        <div class="filterDiv cars">Volvo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Volvo</a></div>
-        <div class="filterDiv cars">Ferrary<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ferrary</a></div>
-        <div class="filterDiv colors">Red<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Red</a></div>
-        <div class="filterDiv cars">Ford<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ford</a></div>
-        <div class="filterDiv colors">Blue<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Blue</a></div>
-        <div class="filterDiv animals">Cat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cat</a></div>
-        <div class="filterDiv animals">Dog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dog</a></div>
-        <div class="filterDiv fruits">Melon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Melon</a></div>
-        <div class="filterDiv fruits animals">Kiwi<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Kiwi</a></div>
-        <div class="filterDiv fruits">Banana<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Banana</a></div>
-        <div class="filterDiv fruits">Lemon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Lemon</a></div>
-        <div class="filterDiv animals">Cow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cow</a></div>
-        <div class="filterDiv animals">Ram<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ram</a></div>
-        <div class="filterDiv cars">Benze<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Benze</a></div>
-        <div class="filterDiv colors fruits">orangered<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy orangered</a></div>
-        <div class="filterDiv cars">Vibe<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Vibe</a></div>
-        <div class="filterDiv cars">Howo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Howo</a></div>
-        <div class="filterDiv colors">Rosybrown<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Rosybrown</a></div>
+      <!-- The filterable elements. Note that some have multiple class names (this is because they belong to multiple categories) -->
+      <div class="container">
+      <ul id="myUL">
+        <li class="filterDiv cars">BMW<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy BMW</a></li>
+        <li class="filterDiv colors fruits">Orange<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Orange</a></li>
+        <li class="filterDiv cars">Volvo<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Volvo</a></li>
+        <li class="filterDiv cars">Ferrary<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Ferrary</a></li>
+        <li class="filterDiv colors">Red<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Red</a></li>
+        <li class="filterDiv cars">Ford<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Ford</a></li><br>
+        <li class="filterDiv colors">Blue<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Blue</a></li>
+        <li class="filterDiv animals">Cat<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Cat</a></li>
+        <li class="filterDiv animals">Dog<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Dog</a></li>
+        <li class="filterDiv fruits">Melon<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Melon</a></li>
+        <li class="filterDiv fruits animals">Kiwi<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Kiwi</a></li>
+        <li class="filterDiv fruits">Banana<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Banana</a></li>
+        <li class="filterDiv fruits">Lemon<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Lemon</a></li>
+        <li class="filterDiv animals">Cow<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Cow</a></li>
+        <li class="filterDiv animals">Ram<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Ram</a></li>
+        <li class="filterDiv cars">Benze<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Benze</a></li>
+        <li class="filterDiv colors fruits">orangered<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy orangered</a></li>
+        <li class="filterDiv cars">Vibe<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Vibe</a></li>
+        <li class="filterDiv cars">Howo<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Howo</a></li>
+        <li class="filterDiv colors">Rosybrown<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Rosybrown</a></li>
         <br>
-        <div class="filterDiv cars">Toyota<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Toyota</a></div>
-        <div class="filterDiv colors">Black<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Black</a></div>
-        <div class="filterDiv animals">Catdog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Catdog</a></div>
-        <div class="filterDiv animals">Bulldog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Bulldog</a></div>
-        <div class="filterDiv fruits">Mango<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Mango</a></div>
-        <div class="filterDiv fruits animals">Sparow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Sparow</a></div>
-        <div class="filterDiv fruits">Plantain<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Plantain</a></div>
-        <div class="filterDiv fruits">Apples<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Apples</a></div>
-        <div class="filterDiv animals">Hipotemus<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Hipotemus</a></div>
-        <div class="filterDiv animals">Goat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goat</a></div>
-        <div class="filterDiv cars">Tata<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tata</a></div>
-        <div class="filterDiv colors">Goldenred<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goldenred</a></div>
-        <div class="filterDiv animals">Cangaroo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cangaroo</a></div>
-        <div class="filterDiv animals">Dinosous<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dinosous</a></div>
-        <div class="filterDiv fruits">Tamarid<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tamarid</a></div>
-        <div class="filterDiv fruits animals">Camel<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Camel</a></div>
-        <div class="filterDiv fruits">Pineapple<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></div>
-        <div class="filterDiv fruits">Dates<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dates</a></div>
-        <div class="filterDiv animals">Seacow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Seacow</a></div>
-        <div class="filterDiv animals">Elephant<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Elephant</a></div>
-      </span><br>
-        <span class="myUL">
-          <div class="filterDiv cars">BMW<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy BMW</a></div>
-          <div class="filterDiv colors fruits">Orange<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Orange</a></div>
-          <div class="filterDiv cars">Volvo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Volvo</a></div>
-          <div class="filterDiv cars">Ferrary<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ferrary</a></div>
-          <div class="filterDiv colors">Red<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Red</a></div>
-          <div class="filterDiv cars">Ford<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ford</a></div>
-          <div class="filterDiv colors">Blue<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Blue</a></div>
-          <div class="filterDiv animals">Cat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cat</a></div>
-          <div class="filterDiv animals">Dog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dog</a></div>
-          <div class="filterDiv fruits">Melon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Melon</a></div>
-          <div class="filterDiv fruits animals">Kiwi<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Kiwi</a></div>
-          <div class="filterDiv fruits">Banana<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Banana</a></div>
-          <div class="filterDiv fruits">Lemon<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Lemon</a></div>
-          <div class="filterDiv animals">Cow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cow</a></div>
-          <div class="filterDiv animals">Ram<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Ram</a></div>
-          <div class="filterDiv cars">Benze<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Benze</a></div>
-          <div class="filterDiv colors fruits">orangered<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy orangered</a></div>
-          <div class="filterDiv cars">Vibe<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Vibe</a></div>
-          <div class="filterDiv cars">Howo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Howo</a></div>
-          <div class="filterDiv colors">Rosybrown<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Rosybrown</a></div>
+        <li class="filterDiv cars">Toyota<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Toyota</a></li>
+        <li class="filterDiv colors">Black<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Black</a></li>
+        <li class="filterDiv animals">Catdog<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Catdog</a></li>
+        <li class="filterDiv animals">Bulldog<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Bulldog</a></li>
+        <li class="filterDiv fruits">Mango<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Mango</a></li>
+        <li class="filterDiv fruits animals">Sparow<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Sparow</a></li>
+        <li class="filterDiv fruits">Plantain<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Plantain</a></li>
+        <li class="filterDiv fruits">Apples<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Apples</a></li>
+        <li class="filterDiv animals">Hipotemus<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Hipotemus</a></li>
+        <li class="filterDiv animals">Goat<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Goat</a></li>
+        <li class="filterDiv cars">Tata<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Tata</a></li>
+        <li class="filterDiv colors">Goldenred<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Goldenred</a></li>
+        <li class="filterDiv animals">Cangaroo<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Cangaroo</a></li>
+        <li class="filterDiv animals">Dinosous<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Dinosous</a></li>
+        <li class="filterDiv fruits">Tamarid<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Tamarid</a></li>
+        <li class="filterDiv fruits animals">Camel<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Camel</a></li>
+        <li class="filterDiv fruits">Pineapple<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></li>
+        <li class="filterDiv fruits">Dates<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Dates</a></li>
+        <li class="filterDiv animals">Seacow<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Seacow</a></li>
+        <li class="filterDiv animals">Elephant<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Elephant</a></li>
+        <br>
+          <li class="filterDiv cars">Brabus<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Brabus</a></li>
+          <li class="filterDiv colors fruits">Oman<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Oman</a></li>
+          <li class="filterDiv cars">Honda<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Honda</a></li>
+          <li class="filterDiv cars">Lamborghini<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Lamborghini</a></li>
+          <li class="filterDiv colors">Green<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Green</a></li>
+          <li class="filterDiv cars">Man<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Man</a></li>
+          <li class="filterDiv colors">Ash<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Ash</a></li>
+          <li class="filterDiv animals">Giraph<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Giraph</a></li>
+          <li class="filterDiv animals">Bear<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Bear</a></li>
+          <li class="filterDiv fruits">Cashoe<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Cashoe</a></li>
+          <li class="filterDiv fruits animals">Antelope<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Antelope</a></li>
+          <li class="filterDiv fruits">Citrus<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Citrus</a></li>
+          <li class="filterDiv fruits">Bitterlemon<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Bitterlemon</a></li>
+          <li class="filterDiv animals">Donkey<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Donkey</a></li>
+          <li class="filterDiv animals">Rabbit<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Rabbit</a></li>
+          <li class="filterDiv cars">Mazda<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Mazda</a></li>
+          <li class="filterDiv colors fruits">Sousoap<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Sousoap</a></li>
+          <li class="filterDiv cars">Suzuki<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Suzuki</a></li>
+          <li class="filterDiv cars">Tesla<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Tesla</a></li>
+          <li class="filterDiv colors">darkgreen<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy darkgreen</a></li>
           <br>
-          <div class="filterDiv cars">Toyota<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Toyota</a></div>
-          <div class="filterDiv colors">Black<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Black</a></div>
-          <div class="filterDiv animals">Catdog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Catdog</a></div>
-          <div class="filterDiv animals">Bulldog<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Bulldog</a></div>
-          <div class="filterDiv fruits">Mango<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Mango</a></div>
-          <div class="filterDiv fruits animals">Sparow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Sparow</a></div>
-          <div class="filterDiv fruits">Plantain<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Plantain</a></div>
-          <div class="filterDiv fruits">Apples<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Apples</a></div>
-          <div class="filterDiv animals">Hipotemus<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Hipotemus</a></div>
-          <div class="filterDiv animals">Goat<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goat</a></div>
-          <div class="filterDiv cars">Tata<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tata</a></div>
-          <div class="filterDiv colors">Goldenred<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Goldenred</a></div>
-          <div class="filterDiv animals">Cangaroo<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Cangaroo</a></div>
-          <div class="filterDiv animals">Dinosous<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dinosous</a></div>
-          <div class="filterDiv fruits">Tamarid<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Tamarid</a></div>
-          <div class="filterDiv fruits animals">Camel<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Camel</a></div>
-          <div class="filterDiv fruits">Pineapple<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></div>
-          <div class="filterDiv fruits">Dates<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Dates</a></div>
-          <div class="filterDiv animals">Seacow<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Seacow</a></div>
-          <div class="filterDiv animals">Elephant<br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="181" height="201"><br><a class="purchase" href="https://snifftegist.com">Buy Elephant</a></div>
-        </span>
+          <li class="filterDiv cars">Poushe<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Poushe</a></li>
+          <li class="filterDiv colors">Chrome<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Chrome</a></li>
+          <li class="filterDiv animals">Monkey<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Monkey</a></li>
+          <li class="filterDiv animals">Appes<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Appes</a></li>
+          <li class="filterDiv fruits">Guava<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Guava</a></li>
+          <li class="filterDiv fruits animals">Zebara<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Zebara</a></li>
+          <li class="filterDiv fruits">Ruman<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Ruman</a></li>
+          <li class="filterDiv fruits">Strawberry<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Strawberry</a></li>
+          <li class="filterDiv animals">Hiena<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Hiena</a></li>
+          <li class="filterDiv animals">Gorilla<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Gorilla</a></li>
+          <li class="filterDiv cars">Hyundai<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Hyundai</a></li>
+          <li class="filterDiv colors">purple<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy purple</a></li>
+          <li class="filterDiv animals">Sheep<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Sheep</a></li>
+          <li class="filterDiv animals">Tieger<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Tieger</a></li>
+          <li class="filterDiv fruits">Redberry<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Redberry</a></li>
+          <li class="filterDiv fruits animals">Baboon<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Baboon</a></li>
+          <li class="filterDiv fruits">Blackberry<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Pineapple</a></li>
+          <li class="filterDiv fruits">Sugarcane<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Sugarcane</a></li>
+          <li class="filterDiv animals">Seabull<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Seabull</a></li>
+          <li class="filterDiv animals">Lion<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Lion</a></li>
+        </ul><br>
+        <div id="container2">
+          <li class="filterDiv animals">Chupacabra<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Chupacabra</a></li>
+          <li class="filterDiv animals">Pig<br><h5 class="ptext">Every kind of things that matter<br>Use Gold and Silver not papper</h5><br><img class="products" src="All Natural Fibre.png" alt="All Natural Fibre.png"  width="184" height="204"><br><a class="purchase" href="https://snifftegist.com">Buy Pig</a></li>
+        </div>
+        </div><br>
+
       
         <script>
           function myFunction() {
-              var input, filter, span, div, a, i, txtValue;
+              var input, filter, div, ul, li, a, i, txtValue;
               input = document.getElementById("myInput");
               filter = input.value.toUpperCase();
-              span = document.getElementsByClassName("myUL");
-              div = span.getElementsByTagName("div");
-              for (i = 0; i < div.length; i++) {
-                  a = div[i].getElementsByTagName("a")[0];
+              div = document.getElementsByClassName ("filterDiv")
+              ul = document.getElementById("myUL");
+              li = ul.getElementsByTagName("li");
+              for (i = 0; i < li.length; i++) {
+                  a = li[i].getElementsByTagName("a")[0];
                   txtValue = a.textContent || a.innerText;
                   if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    div[i].style.display = "";
+                      li[i].style.display = "";
                   } else {
-                    div[i].style.display = "none";
+                      li[i].style.display = "none";
                   }
               }
           }
           </script>
+
+<script>
+  function sFunction() {
+      var input, filter, div, li, a, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      div = document.getElementsByClassName ("filterDiv")
+      div = document.getElementById("container2");
+      li = div.getElementsByTagName("li");
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+  </script>
     
           <script>
             filterSelection("all")
@@ -571,13 +664,13 @@
               if (c == "all") c = "";
               // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
               for (i = 0; i < x.length; i++) {
-                w3RemoveClass(x[i], "show");
-                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                sRemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) sAddClass(x[i], "show");
               }
             }
             
             // Show filtered elements
-            function w3AddClass(element, name) {
+            function sAddClass(element, name) {
               var i, arr1, arr2;
               arr1 = element.className.split(" ");
               arr2 = name.split(" ");
@@ -589,7 +682,7 @@
             }
             
             // Hide elements that are not selected
-            function w3RemoveClass(element, name) {
+            function sRemoveClass(element, name) {
               var i, arr1, arr2;
               arr1 = element.className.split(" ");
               arr2 = name.split(" ");
@@ -614,15 +707,25 @@
           </script>
 </body>
 <footer><br>
-  Aliexpress Approved<br><br>
+  Made By SniffTegist<br><br>
   <nav>
-    <b id="license" title="license" href="license.html">(c) 2022 Market</b><br><br><br>
-      <a class="reason" href="https://www.youtube.com">
+    <b id="license" title="license" href="license.html">(c) 2022 Sample Market</b><br><br>
+      <a class="reason" href="https://www.youtube.com/channel/UCxozb09Z7aaFjW1o4iOSrLA">
         <img title="youtube" src="YouTube-Logo AA.png" alt="YouTube-Logo AA.png" width="30" height="30" /></a>
       <a title="whatsapp" href="https://www.whatsapp.com">
         <img title="whatsapp" src="Enbe Whats'App Logo.png" alt="Enbe Whats'App Logo.png" width="30" height="30" /></a>
         <a title="call" href="call:+2348166049252">
           <img title="call" src="SniffTegist Telephone2.png" alt="SniffTegist Telephone.png" width="30" height="30" />
+          <p id="chi"></p>
+          <script>
+              function Function() {
+                var txt;
+                if (confirm("Sample use google ads to serve contents!")) { txt = "You consent"; }
+                else { txt = "You refused"; }
+          
+                document.getElementById("chi").innerHTML = txt;
+              }
+              </script>
   </nav>
 </footer>
 </html>
